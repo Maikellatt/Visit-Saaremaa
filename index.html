@@ -23,10 +23,10 @@
                     <span class="block text-sm"><b>ET</b></span>
                     <ul class="py-1" aria-labelledby="languageDropdown">
                         <li>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg">EN</a>
+                            <a href="#" class="block  text-sm text-gray-700 py-1 hover:bg-gray-100">EN</a>
                         </li>
                         <li>
-                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">FIN</a>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block py-1">FIN</a>
                         </li>
                     </ul>
             </div>
@@ -41,7 +41,7 @@
      </nav>
      <!--Pildid ja viited-->
      <!--Esimene rida-->
-     <div class="flex gap-6 mt-8  text-[50px]">
+     <div class="flex gap-6 mt-8  text-[50px] ml-36">
         <h1><b>Avasta Saaremaa</b></h1>
      </div>
      <div class="grid grid-cols-12 col-start-2 gap-6 mt-8">
@@ -85,17 +85,75 @@
         </div>
         <!--Neljas rida-->
         <div class="col-span-10 col-start-2 mx-auto flex justify-center overflow-hidden h-[400px] w-full rounded-lg">
-            <img class="object-cover transition-transform duration-700 transform hover:scale-125 w-full" src="https://images.delfi.ee/media-api-image-cropper/v1/8dea5080-c4aa-11eb-9da7-e71640ca928a.jpg?noup&w=1200&h=711&ch=0.8459&cw=1&cx=0&cy=0&r=16:9" alt="">
+            <img class="object-cover transition-transform duration-700 transform hover:scale-125 w-full" src="https://visitsaaremaa.ee/wp-content/uploads/2022/12/Liitu-visit-saaremaa-uudiskirjaga-scaled.jpg" alt="">
         </div>
         <!--Viies rida-->
-        <div class="col-span-5 col-start-2 flex justify-center overflow-hidden h-[100px] rounded-lg">
-            <img class="object-cover transition-transform duration-700 w-full" src="https://monokino.org/storage/media/img/original/16_blue.jpg" alt="">
-            <div class="absolute  text-white">
-                <p class="text-[26px]"><b>Facebook</b></p>
+        <div class="col-span-5 col-start-2 flex justify-center overflow-hidden h-[100px] w-[550px] rounded-lg relative">
+            <img class="object-cover transition-transform duration-700 w-full h-full" src="https://monokino.org/storage/media/img/original/16_blue.jpg" alt="Facebook Image">
+        <div class="absolute inset-0 flex items-center text-white bg-black bg-opacity-40 p-4">
+            <!-- Logo ja tekst vasakul -->
+            <a href="https://www.facebook.com/visitsaaremaa/" target="_blank" class="flex items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" class="h-6 w-6 mr-2">
+            <p class="text-[26px] font-bold">Facebook</p>
+            </a>
+        </div>
+    
+            
+        </div>
+        <div class="flex justify-center overflow-hidden h-[100px] w-[550px] rounded-lg relative">
+            <img class="object-cover transition-transform duration-700 w-full h-full" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARkAAACzCAMAAACKPpgZAAAAk1BMVEWgIPD///+bAO+cBu+fGvCVAO+eFPDv3vzEhvWeF/DTp/jp0/vQoffbtfnmzfvgwvrGivbcufm1YfP69P7y5P3jx/qtTPK+efTs2fzBfvXOm/enOvHYsPisR/LLlva8cvTWrPj27P2kKfGqQPGwVPLIkPb9+v/06P21Y/O5avSlMvH58/6/fPTHjva7b/ThxPqyW/OJJwgcAAAEL0lEQVR4nO3Zi3KiShAG4Jmei4ACQkSF4A1vkSQb3//pTo8m52R3sULlxI1s/V9KEwxa8GdmuiEisAJ+ZwOBYJohFwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgP9FW0XM6u8+kBtjSSwGSRYHeU3quw/mhliaTOWb/RbZvKHjSr6380zrOaX1xV27HzAt5a/6qmU0FbuQAEXLjkdjot+CkXJ1eSi8pwK384CE2/v84DeengTJEQnR7nNukskaguFoqM2b1UCW3kqmuq6EqCvNA2g9EzXVG9Ike/w02yh77VO4Dioag5EyMi3ezclMzFA+5zxuKtk30V0hk1yGnKx1yYgRf1LayWj0+kIwUuYtVgmXTDWVh1wWJDjMWO4GaS73m0QOjOzxdkqrXZuMbw71LyazazGfOJnT8PovmZTIk1u65w1O5k6W4Uhe/zS+np691qKmgIYfD5rTOrMh5ck5zyaXzEwrl0zNU4uT2cnkJX75Ayfy5ah0ETyu42T4ezK9jweNm03kCzuRCS83LpmxSyYznixdMlNZG1N1sTyZ1Wna8DpJDYPm44rLVTu3rlafRx7XuVMyO95Yc9U2GylHu1GrMndbzme0mHNLMm9IZvFhUfHTwdjF56+DoH56osWgdsl42+XY2sKzti7K8x4d4x/dXOLVQI7eBTINXn8oPl5o/NdmWSulrRWWNzmZZ3Ivu0ZGK2rbTt8UXh+kLDenGKLhVpa9YfYYbMe8rIbuN5+aBmoo5x2/LOBkcj7/5/y0RkxkKsXTZrosf8y85M5lFn4qGb1erLs4TH5if/D5zw8umcm0N+RlmKT3MshILhN+Lfjcn17/BXe/9NgVZ1egksPkuHmYSNp66z6vybbXrqH5a51qdWnSNJJ76So4P+74237kVuGN/93H933ofCvvrqFksw72IV9GNbS+/4rbJMOVmj+GSGgiJZRSwifi0u06407f1Gtqfd+0mUx2S0OrypdYi+QloSCc00OSVCqJj5THgw6Puou3Z7jBaXNaJqwKEx2oot6YqjQwmeib8XLwYCIRmfmkk7dmzmh1KZm6Re3V4TSKN30j/DHPPe1HXmjmRTJL7k12DM2x7PB88mcXgmlz40rUk3k4rnh06SM3zLqKi5iKIkvvs2XPlmH4yY7oNqhDYzCtlgg9y577Oe2JF92RIeJJND9ExvTJPcgUh07XfWqKpmi3dlJoQrIPvSQ2+TQp634QUVJmk7qMUtomn7vwuh3qfv9LLruHtqfEhZpnJPGzpUppEu5LWV1x1eYL8ase9x+gzfCnXm/Z1X+EXIGiRfx4Hi7RUHV8Dnwxyy3s7DgW1OnG9Vq03+H/tQIAAAAAXAWuNJtZESCaJjb4B5kaM6Gl8S89AAAAAElFTkSuQmCC" alt="Instagram Image">
+            <div class="absolute inset-0 flex items-center text-white bg-black bg-opacity-40 p-4">
+                <!-- Logo ja tekst vasakul -->
+                <a href="https://www.instagram.com/visit_saaremaa/" target="_blank" class="flex items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" class="h-6 w-6 mr-2">
+                <p class="text-[26px] font-bold">Instagram</p>
             </div>
+        </div>
+            
         
         
      </div>
+     <!--JALUS-->
+     <footer class="bg-[#fdf0d5] text-black py-8">
+        <div class="flex justify-between gap-12 mx-auto px-6 max-w-screen-xl">
+          
+          <!-- Esimene veerg-->
+          <div class="flex-1">
+            <h2 class="text-xl text-[#c9184a] font-semibold mb-4">Info</h2>
+            <ul>
+              <li><a href="https://visitsaaremaa.ee/planeeri/transport/" class="text-sm hover:text-[#ffafcc]">Transport</a></li>
+              <li><a href="https://visitsaaremaa.ee/planeeri/majutus/" class="text-sm hover:text-[#ffafcc]">Majutus Saaremaal</a></li>
+              <li><a href="https://visitsaaremaa.ee/planeeri/meite-maitsed/" class="text-sm hover:text-[#ffafcc]">Meie maitsed</a></li>
+              <li><a href="https://visitsaaremaa.ee/planeeri/saaremaa-sundmused/" class="text-sm hover:text-[#ffafcc]">Saaremaa sündmused</a></li>
+            </ul>
+          </div>
+    
+          <!-- Teine veerg-->
+          <div class="flex-1">
+            <h2 class="text-xl text-[#c9184a] font-semibold mb-4">Organisatsioon</h2>
+            <ul>
+              <li><a href="https://visitsaaremaa.ee/info/visit-saaremaa/" class="text-sm hover:text-[#ffafcc]">Visit Saaremaa</a></li>
+              <li><a href="https://visitsaaremaa.ee/info/visit-saaremaa/tootajad/" class="text-sm hover:text-[#ffafcc]">Töötajad</a></li>
+              <li><a href="https://visitsaaremaa.ee/uudiskiri-turismiprofessionaalile/" class="text-sm hover:text-[#ffafcc]">Uudiskiri turismiprofessionaalile</a></li>
+            </ul>
+          </div>
+    
+          <!-- Kolmas veerg-->
+          <div class="flex-1">
+            <h2 class="text-xl text-[#c9184a] font-semibold mb-4">Kontakt</h2>
+            <ul>
+              <li><a href="" class="text-sm hover:text-[#ffafcc]">Tallinna 2, Kuressaare</a></li>
+              <li><a href="tel:+3724533120" class="text-sm hover:text-[#ffafcc]">+372 45 33 120</a></li>
+              <li><a href="mailto:info@visitsaaremaa.ee" class="text-sm hover:text-[#ffafcc]">info@visitsaaremaa.ee</a></li>
+            </ul>
+          </div>
+          <!--Neljas veerg-->
+          <div class="flex-1">
+            <img src="https://visitsaaremaa.ee/wp-content/uploads/2017/11/Turismiinfo-logo-viimane-e1511308278934.jpg" class="w-24 h-26 object-contain mx-auto">
+          </div>
+        </div>
+    </footer>
+    
 
 
 </body>
