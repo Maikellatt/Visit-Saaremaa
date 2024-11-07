@@ -7,17 +7,115 @@
   <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
   <title>Visit Saaremaa</title>
 </head>
+    <style>
+        nav.scrolled {
+            background-color: white;
+            color: black;
+        }
+
+        nav.scrolled svg {
+            fill: black !important;
+        }
+
+        nav:hover svg {
+            fill: black !important;
+        }
+
+        nav svg {
+            fill: white;
+            transition: fill 0.3s ease;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #EA5477;
+            transform: scaleX(0);
+        }
+
+        .nav-item:hover::after {
+            transform: scaleX(1);
+        }
+
+        .dropdown-container {
+            position: relative;
+        }
+
+        .dropdown-container:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            position: relative;
+        }
+
+        .dropdown-menu a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #EA5477;
+            transform: scaleX(0);
+        }
+
+        .dropdown-menu a:hover::after {
+            transform: scaleX(1);
+        }
+
+    </style>
+
 <body class="">
     <!-- Navigatsioon -->
-     <nav class="hover:bg-white hover:text-black uppercase flex justify-center items-center font-medium space-x-12">
+     <nav class="hover:bg-white hover:text-black uppercase flex justify-center items-center font-medium space-x-12 fixed top-0 left-0 w-full bg-white z-50">
         <img class="h-20 w-40 object-cover" src="https://kht.ee/images/Partnerid/VisitSaaremaa.png" alt="">
-        <div class="flex space-x-12 items-center">
+        <div class="dropdown-container">
+            <button class="nav-item hover:text-black font-medium inline-flex items-center" type="button">
+                Planeeri
+            </button>
+            <div
+                class="dropdown-menu hidden bg-white text-black text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4 absolute">
+                <ul class="py-1">
+                    <li>
+                        <a href="#" class="text-sm hover:bg-gray-100 block px-4 py-2">Transport</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-sm hover:bg-gray-100 block px-4 py-2">Majutus</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-sm hover:bg-gray-100 block px-4 py-2">Söök</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-sm hover:bg-gray-100 block px-4 py-2">Sündmused</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-sm hover:bg-gray-100 block px-4 py-2">Giidid</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
             <a href=""><b>Planeeri</b></a>
             <a href=""><b>Avasta</b></a>
             <a href=""><b>Naudi</b></a>
             <a href=""><b>Viikingite saar</b></a>
             <a href=""><b>info</b></a>
-            <button class="font-medium inline-flex items-center" type="button" data-dropdown-toggle="dropdown"> ET </button>
+            <button 
+                class="font-medium inline-flex items-center" 
+                type="button" 
+                data-dropdown-toggle="dropdown"
+            >
+                ET
+            </button>
             <div class="hidden bg-white text-base z-50 list-one divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
                 <div class="px-4 py-3">
                     <span class="block text-sm"><b>ET</b></span>
@@ -30,17 +128,19 @@
                         </li>
                     </ul>
             </div>
+            
                 
                 
         </div>
         <img src="https://openweathermap.org/img/w/01d.png" alt="">
             <a>12.3 &deg;C.</a>
             <div class="flex items-center">
-                <img src="https://t3.ftcdn.net/jpg/05/99/84/86/360_F_599848646_MdK7wVDJQZygObyKEahVkOuhh0IGdTt3.jpg" alt="Search Icon" class="h-6 w-6 mr-2">
+                <img src="https://t3.ftcdn.net/jpg/05/99/84/86/360_F_599848646_MdK7wVDJQZygObyKEahVkOuhh0IGdTt3.jpg" alt="Search Icon" class="h-10 w-10 mr-2">
 
      </nav>
      <!--Pildid ja viited-->
      <!--Esimene rida-->
+     <main class="pt-24">
      <div class="flex gap-6 mt-8  text-[50px] ml-36">
         <h1><b>Avasta Saaremaa</b></h1>
      </div>
@@ -84,11 +184,32 @@
             </div>
         </div>
         <!--Neljas rida-->
-        <div class="col-span-10 col-start-2 mx-auto flex justify-center overflow-hidden h-[400px] w-full rounded-lg">
-            <img class="object-cover transition-transform duration-700 transform hover:scale-125 w-full" src="https://visitsaaremaa.ee/wp-content/uploads/2022/12/Liitu-visit-saaremaa-uudiskirjaga-scaled.jpg" alt="">
+        <div class="relative col-span-10 col-start-2 mx-auto flex justify-center overflow-hidden h-[400px] w-full rounded-lg">
+            <img class="absolute inset-0 object-cover transition-transform duration-700 transform hover:scale-125 w-full" src="https://visitsaaremaa.ee/wp-content/uploads/2022/12/Liitu-visit-saaremaa-uudiskirjaga-scaled.jpg" alt="">
+            <div class="absolute top-8 text-center">
+                <p class="text-white text-[32px] font-bold drop-shadow-md mb-4">Sinu nimi</p>
+                <input type="text" placeholder="" 
+                    class="bg-white text-black text-center rounded-lg px-4 py-2 w-[200px] outline-none shadow-md mb-6">
+                <p class="text-white text-[32px] font-bold drop-shadow-md mb-4">Sinu e-mail</p>
+                <input type="text" placeholder="" 
+                    class="bg-white text-black text-center rounded-lg px-4 py-2 w-[200px] outline-none shadow-md">
+                <div class="flex flex-col items-center justify-center mt-4">
+                    <div class="flex items-center mb-4">
+                        <input type="checkbox" id="data-consent" class="w-5 h-5 mr-2">
+                        <label for="data-consent" class="text-white text-[14px]">Olen tutvunud Andmetöötluse põhimõtetega</label>
+                    </div>
+                    <button class="bg-[#EA5477] text-white px-4 py-2 rounded-lg transition-colors">
+                        Liitun uudiskirjaga
+                    </button>
+                    <a class="text-left text-color">
+                        Liitu uudiskirjaga
+                    </a>
+                </div>
+            </div>
+
         </div>
         <!--Viies rida-->
-        <div class="col-span-5 col-start-2 flex justify-center overflow-hidden h-[100px] w-[550px] rounded-lg relative">
+        <div class="col-span-5 col-start-2 flex justify-center overflow-hidden h-[70px] w-[550px] relative">
             <img class="object-cover transition-transform duration-700 w-full h-full" src="https://monokino.org/storage/media/img/original/16_blue.jpg" alt="Facebook Image">
         <div class="absolute inset-0 flex items-center text-white bg-black bg-opacity-40 p-4">
             <!-- Logo ja tekst vasakul -->
@@ -100,7 +221,7 @@
     
             
         </div>
-        <div class="flex justify-center overflow-hidden h-[100px] w-[550px] rounded-lg relative">
+        <div class="flex justify-center overflow-hidden h-[70px] w-[550px] relative">
             <img class="object-cover transition-transform duration-700 w-full h-full" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARkAAACzCAMAAACKPpgZAAAAk1BMVEWgIPD///+bAO+cBu+fGvCVAO+eFPDv3vzEhvWeF/DTp/jp0/vQoffbtfnmzfvgwvrGivbcufm1YfP69P7y5P3jx/qtTPK+efTs2fzBfvXOm/enOvHYsPisR/LLlva8cvTWrPj27P2kKfGqQPGwVPLIkPb9+v/06P21Y/O5avSlMvH58/6/fPTHjva7b/ThxPqyW/OJJwgcAAAEL0lEQVR4nO3Zi3KiShAG4Jmei4ACQkSF4A1vkSQb3//pTo8m52R3sULlxI1s/V9KEwxa8GdmuiEisAJ+ZwOBYJohFwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgP9FW0XM6u8+kBtjSSwGSRYHeU3quw/mhliaTOWb/RbZvKHjSr6380zrOaX1xV27HzAt5a/6qmU0FbuQAEXLjkdjot+CkXJ1eSi8pwK384CE2/v84DeengTJEQnR7nNukskaguFoqM2b1UCW3kqmuq6EqCvNA2g9EzXVG9Ike/w02yh77VO4Dioag5EyMi3ezclMzFA+5zxuKtk30V0hk1yGnKx1yYgRf1LayWj0+kIwUuYtVgmXTDWVh1wWJDjMWO4GaS73m0QOjOzxdkqrXZuMbw71LyazazGfOJnT8PovmZTIk1u65w1O5k6W4Uhe/zS+np691qKmgIYfD5rTOrMh5ck5zyaXzEwrl0zNU4uT2cnkJX75Ayfy5ah0ETyu42T4ezK9jweNm03kCzuRCS83LpmxSyYznixdMlNZG1N1sTyZ1Wna8DpJDYPm44rLVTu3rlafRx7XuVMyO95Yc9U2GylHu1GrMndbzme0mHNLMm9IZvFhUfHTwdjF56+DoH56osWgdsl42+XY2sKzti7K8x4d4x/dXOLVQI7eBTINXn8oPl5o/NdmWSulrRWWNzmZZ3Ivu0ZGK2rbTt8UXh+kLDenGKLhVpa9YfYYbMe8rIbuN5+aBmoo5x2/LOBkcj7/5/y0RkxkKsXTZrosf8y85M5lFn4qGb1erLs4TH5if/D5zw8umcm0N+RlmKT3MshILhN+Lfjcn17/BXe/9NgVZ1egksPkuHmYSNp66z6vybbXrqH5a51qdWnSNJJ76So4P+74237kVuGN/93H933ofCvvrqFksw72IV9GNbS+/4rbJMOVmj+GSGgiJZRSwifi0u06407f1Gtqfd+0mUx2S0OrypdYi+QloSCc00OSVCqJj5THgw6Puou3Z7jBaXNaJqwKEx2oot6YqjQwmeib8XLwYCIRmfmkk7dmzmh1KZm6Re3V4TSKN30j/DHPPe1HXmjmRTJL7k12DM2x7PB88mcXgmlz40rUk3k4rnh06SM3zLqKi5iKIkvvs2XPlmH4yY7oNqhDYzCtlgg9y577Oe2JF92RIeJJND9ExvTJPcgUh07XfWqKpmi3dlJoQrIPvSQ2+TQp634QUVJmk7qMUtomn7vwuh3qfv9LLruHtqfEhZpnJPGzpUppEu5LWV1x1eYL8ase9x+gzfCnXm/Z1X+EXIGiRfx4Hi7RUHV8Dnwxyy3s7DgW1OnG9Vq03+H/tQIAAAAAXAWuNJtZESCaJjb4B5kaM6Gl8S89AAAAAElFTkSuQmCC" alt="Instagram Image">
             <div class="absolute inset-0 flex items-center text-white bg-black bg-opacity-40 p-4">
                 <!-- Logo ja tekst vasakul -->
@@ -155,6 +276,7 @@
     </footer>
     
 
+     </main>
 
 </body>
 </html>
